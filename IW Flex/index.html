@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            height: 80px;
+            width: 80%;
+            margin: auto;
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+        
+        }
+        .parent>.content{
+            height: 50px;
+            width: 30%;
+            border: 1px solid rgb(10, 7, 7);
+            display: flex;
+            justify-content:space-between;
+            flex-flow: row wrap;
+            
+        }
+        .parent>div>div{
+            padding: 20px 10px 20px 10px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #a{
+            background-color: black;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div>
+            <h3>MEGAWIDTH</h3>
+        </div>
+        <div class="content">
+            <div>Home</div>
+            <div>About</div>
+            <div>Blog</div>
+            
+                <select name="Page" id="a">
+                    <option value="Page">Page1</option>
+                    <option value="Page">Page2</option>
+                    <option value="Page">Page3</option>
+                </select>
+            
+        </div>
+    </div>
+</body>
+</html>
