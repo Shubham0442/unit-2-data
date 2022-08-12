@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,200px);
+            gap: 30px;
+            grid-template-areas: "a b b c"
+                                 "d d e f"
+                                 "g h i i";
+                                 margin-left: 50px;
+            padding:50px 50px 50px 50px;
+           
+
+                                 
+        }
+        #parent>div{
+            background-color: #217867;
+            border-radius: 10px;
+            color: white; 
+            display: grid;
+            align-items:center;
+            justify-content:start;
+            font-size: 100px;
+            padding-left: 50px;
+
+            
+        }
+        #parent>div:nth-child(1)
+        {
+            grid-area: a;
+            margin-right: 90px;
+        }
+        
+        #parent>div:nth-child(2)
+        {
+            grid-area: b;
+            margin-left: -60px;
+            margin-right:-12px;
+        }
+        #parent>div:nth-child(3)
+        {
+            grid-area: c;
+            margin-left: 60px;
+        }
+        #parent>div:nth-child(4)
+        {
+            grid-area: d;
+            margin-right: -35px;
+        }
+        #parent>div:nth-child(5)
+        {
+            grid-area: e;
+            margin-right: -30px;
+            margin-left: 80px;
+        }
+        #parent>div:nth-child(6)
+        {
+            grid-area: f;
+            margin-left: 60px;
+        }
+        #parent>div:nth-child(7)
+        {
+            grid-area: g;
+            margin-right: 90px;
+        }
+        #parent>div:nth-child(8)
+        {
+            grid-area: h;
+            margin-right: 140px;
+            margin-left: -60px;
+        }
+        #parent>div:nth-child(9)
+        {
+            grid-area: i;
+            margin-left: -110px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

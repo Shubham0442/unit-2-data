@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        
+         #top{
+             width:36%;
+             height: 100px;
+             margin-top: 70px;
+             margin:auto;
+             margin-bottom: 120px;
+             
+         }
+         #top>h2{
+          
+          text-align: center;
+          font-size: 40px;
+          
+          
+      }
+      #top>p{
+          font-size: 17px;
+          color: #707070;
+          text-align: center;
+      }
+
+      #bottom{
+          width: 60%;
+          margin: auto;
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+          grid-template-rows: auto;
+          gap: 30px;
+          
+      }
+
+      #bottom>div{
+          
+          text-align: center;
+          padding:10px 20px 20px 20px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          
+      }
+
+        #bottom>div>h3{
+            font-size: 25px;
+            margin-bottom: -20px;
+        }
+
+        #bottom>div>h2{
+            font-size: 35px;
+        }
+        #bottom>div>h2+p{
+            font-size: 16px;
+            margin-top: -25px;
+            font-style:italic;
+            margin-bottom: 40px;
+            color: #707070;
+        }
+        #bottom>div>p+p{
+            font-size: 18px;
+            padding-left: 5px;
+            line-height:1.5;
+            color: #707070;
+        }
+        
+        button{
+            color: #2f8eff;
+            background-color: white;
+            padding: 15px 50px 15px 50px;
+            font-size: 17px;
+            font-weight: bold;
+            border-radius:10px ;
+            border: 1px solid #007aff;
+        }
+        button:hover{
+            cursor: pointer;
+            color: white;
+            background-color: #007aff;
+        }
+        .orange{
+            color: #f27e42;
+        }
+        .green{
+            color: #09ab78;
+        }
+        .blue{
+            color:#4294f2;
+        }
+
+        @media only screen and (min-width:421px) and (max-width: 720px) {
+            #bottom{
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: auto;
+            }
+            #bottom>div{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            
+            #top{
+                width: 60%;
+                padding-bottom: 20px;
+                
+            }
+         
+        }
+        @media only screen and (min-width:70px) and (max-width: 420px) {
+            #bottom{
+                grid-template-columns: repeat(1,1fr);
+                grid-template-rows: auto;
+                
+            }
+            #bottom>div{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: auto;
+            }
+            
+            #top{
+                width: 100%;
+                height: auto;
+                padding-left: 20px 10px 20px 10px;
+                text-align: center;
+               /* padding: 20px 20px 500px 20px; */
+               
+            }
+         
+        }
+
+    </style>
+</head>
+<body>
+    <div id="top">
+        <h2>Choose a plan that right for your business</h2>
+        <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website are really like!</p>
+    </div>
+    <div id="bottom">
+        <div>
+            <h3>Starter Plan</h3>
+            <h2 class="green">Free</h2>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h3>Business Plan</h3>
+            <h2 class="orange">$39.00</h2>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience with our.</p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h3>Premium Plan</h3>
+            <h2 class="blue">$59.00</h2>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+            <button>Start Now</button>
+        </div>
+    </div>
+</body>
+</html>

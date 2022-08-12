@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar{
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            padding: 20px;
+        }
+
+        #navbar>div{
+            color: aliceblue;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        
+        <div><a href="men.html">Men</a></div>
+        <div onclick="window.location.href='women.html'">Women</div>
+        <div id="kids">kids</div>
+        <div>Shoes</div>
+
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("#kids").addEventListener("click",myfunction)
+    function myfunction()
+    {
+        window.location.href='kids.html'
+    }
+</script>

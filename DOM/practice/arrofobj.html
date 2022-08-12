@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     <form>
+         
+        <input type="text" id="name" placeholder="enter name"/>
+        <input type="number" id="price"/>
+        <input type="number" id="qty"/>
+        <input type="submit" value="Add data"/>
+     </form>
+
+     <div id="container"></div>
+ </body>
+
+ </html>
+
+ <script>
+     
+     document.querySelector("form").addEventListener("submit", myFormdata)
+     
+     var data = [];
+
+     function myFormdata(){
+            event.preventDefault();
+        var obj = {
+            name: document.querySelector("#name").value,
+            price: document.querySelector("#price").value,
+            quantity: document.querySelector("#qty").value
+        }
+
+        data.push(obj);
+        console.log(data);
+      
+        displayData(data)
+
+     }
+    
+
+     function displayData(data)
+     {
+         document.querySelector("#container").innerText = ""
+         data.map(function(elem)
+         {  
+             var box = document.createElement("div")
+
+             var name = document.createElement("p")
+             name.innerText=elem.name;
+
+             var roll = document.createElement("p")
+             roll.innerText=elem.price
+
+             var quan = document.createElement("p")
+             quan.innerText = elem.quantity 
+
+             box.append(name,roll,quan)
+             document.querySelector("#container").append(box)
+         })
+     }
+     
+     
+    </script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <input type="number" placeholder="num1" id="num1" value="">
+      <input type="number" placeholder="num2" id="num2" value="">
+
+      <h4 id="out1"></h4>
+      <h4 id="out2"></h4>
+    <input type="submit" id="mult" value="Multification">
+    <input type="submit" id="expo" value="Exponent">
+</body>
+</html>
+
+<script>
+    document.querySelector("#mult").addEventListener("click", myMult);
+    document.querySelector("#expo").addEventListener("click", myExpo);
+
+    var output1 = document.querySelector("#out1");
+    var output2 = document.querySelector("#out2");
+
+    
+
+    function myMult ()
+    {
+        var a = document.querySelector("#num1").value;
+        var b = document.querySelector("#num2").value;
+
+        
+        output1.innerText = a*b;
+    }
+
+    function myExpo ()
+    {
+        var a = document.querySelector("#num1").value;
+        var b = document.querySelector("#num2").value;
+        var e = 1;
+        for(var i=0; i<b; i++)
+        {
+           e = e*a;
+        }
+
+        output2.innerText = e;
+    }
+
+</script>

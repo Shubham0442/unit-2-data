@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="number" id="num1" placeholder="number-1" value="">
+        <input type="number" id="num2" placeholder="number-2" value="">
+         
+        <p id="output">Exponent output is here!</p>
+        <button>Multiplication</button>
+
+        <button id="expo">Click here to find the exponent!</button>
+</body>
+</html>
+
+<script>
+    document.querySelector("button").addEventListener("click", showMult)
+    document.querySelector("#expo").addEventListener("click", exponent)
+    
+
+    function showMult () 
+    {
+        var a = document.querySelector("#num1").value;
+        var b = document.querySelector("#num2").value;
+
+        alert(a*b);
+    }
+
+    function exponent ()
+    {
+        var a = document.querySelector("#num1").value;
+        var b = document.querySelector("#num2").value;
+        var out = 1;
+        for(var i=1; i<=b; i++)
+        {
+            out = out*a;
+        }
+
+        document.querySelector("#output").innerText = out;
+    }
+
+
+
+
+
+
+</script>

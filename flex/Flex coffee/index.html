@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+       #container{
+         width:90%;
+         margin: auto;
+         
+         display: flex;
+         flex-flow: wrap;
+         justify-content:space-around;
+         
+       }
+       /* #drawer{
+         height: 230px;
+         width: 100%;
+         border: 1px solid black;
+         display: flex;
+         flex-flow:row wrap;
+         
+
+       } */
+       #container>div{
+         height: 30%;
+         width: 30%;
+         
+         margin: auto;
+
+         font-family: sans-serif;
+         padding-left: 10px;
+        
+         font-size: 16px;
+         flex-flow: column wrap;
+         
+       }
+       #container>div>div{
+         border-radius: 15px;
+         padding-left: 15px;
+         padding-right: 15px;
+         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+         margin-top: 40px;
+         padding-bottom: 10px
+
+       }
+       .innerbox{
+         display: flex;
+         flex-flow: row wrap;
+         justify-content: space-between;
+         font-size: 18px;
+         font-weight: bold;
+         font-family: sans-serif;
+       }
+       p{
+        color: #7e7b7c;
+       }
+       .innerbox>div+div>h3{
+         color: #b88b3b;
+       }
+       
+
+
+      
+    </style>
+  </head>
+
+  <body>
+ <!-- dont change any tags and id name -->
+ <!-- use borders to check for boxes -->
+<!-- main container -->
+    <div id="container">
+
+
+      <div>
+        <div>
+          <!--class="innerbox" is the box where we have coffee name and price -->
+          <div class="innerbox">
+            <div><h3>Cappuccino</h3></div>
+            <div><h3>$49</h3></div>
+          </div>
+            
+             
+          <!--para with text - usage of internet  -->
+          <p>Usage of Internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+          <div class="innerbox">
+            <div><h3>Americano</h3></div>
+            <div><h3>$49</h3></div>
+          </div>
+          <p>Usage of Internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+          <div class="innerbox">
+            <div><h3>Espresso</h3></div>
+            <div><h3>$49</h3></div>
+          </div>
+          <p>Usage of Internet is becoming more common due to rapid advance.</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="innerbox">
+            <div><h3>Macchiato</h3></div>
+            <div><h3>$49</h3></div>
+          </div>
+          <p>Usage of Internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+          <div class="innerbox">
+            <div><h3>Mocha</h3></div>
+            <div><h3>$49</h3></div>
+          </div>
+          <p>Usage of Internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+          <div class="innerbox">
+            <div><h3>Coffee Latte</h3></div>
+            <div><h3>$49</h3></div>
+          </div>
+          <p>Usage of Internet is becoming more common due to rapid advance.</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="innerbox">
+            <div><h3>Piccolo Latte</h3></div>
+            <div><h3>$49</h3></div>
+          </div>
+          <p>Usage of Internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+          <div class="innerbox">
+            <div><h3>Ristretto</h3></div>
+            <div><h3>$49</h3></div>
+          </div>
+          <p>Usage of Internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+          <div class="innerbox">
+            <div><h3>Affogato</h3></div>
+            <div><h3>$49</h3></div>
+          </div>
+          <p>Usage of Internet is becoming more common due to rapid advance.</p>
+        </div>
+      </div>
+      
+      
+      
+    </div>
+  </body>
+</html>

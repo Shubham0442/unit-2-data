@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <button id="plus">Increase</button>
+     <button id="minus">Decrease</button>
+</body>
+</html>
+
+<script>
+    document.querySelector("#plus").addEventListener("click",increase)
+
+    if(localStorage.getItem("counter")==null)
+    {
+        c = 0;
+        // document.querySelector("h1").innerText = "counter is null"
+        // console.log(document.querySelector("h1").innerText)
+        // console.log(document.querySelector("h1"))
+        alert("counter is null")
+        
+    }
+    else
+    {
+       c = localStorage.getItem("counter")
+    }
+
+    var c = localStorage.getItem("counter")
+    var count = document.querySelector("h1")
+    count.innerText = localStorage.getItem("counter")
+    
+   
+    
+    
+    function increase()
+    {
+       c++;
+       localStorage.setItem("counter",c)
+    //    document.querySelector("h1").innerText = c;
+       //console.log("counter is null")
+       count.innerText = c;
+    }
+
+    document.querySelector("#minus").addEventListener("click",decrease)
+    function decrease()
+    {
+        c--;
+        localStorage.setItem("counter",c)
+        // document.querySelector("h1").innerText = c;
+        count.innerText = c;
+    }
+
+    // if(counter == null)
+    // {
+    //     alert("counter is null")
+    // }
+</script>

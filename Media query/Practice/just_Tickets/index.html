@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #f84364;
+        margin-bottom: 80px;
+      }
+
+      #container{
+        width: 70%;
+       
+        
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,150px);
+        gap: 20px;
+      }
+      #container>div{
+        border: 1px solid red;
+        display: flex;
+        
+      }
+      
+      img{
+        width: 150px;
+        height: 150px;
+      }
+      #container>div>div{
+        margin-left: 20px;
+      }
+
+      button{
+        background-color: #f84364;
+        border: 0;
+        color: white;
+        padding: 5px 10px 5px 10px;
+        border-radius: 10px;
+      }
+      /* Medium screens */
+      @media only screen and (min-width: 421px) and (max-width: 780px) {
+        #container{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          grid-template-rows: auto;
+        }
+        
+      img{
+        border-radius: 50%;
+        
+        
+      }
+      #container>div{
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        padding-bottom: 20px;
+        
+
+      }
+      #container>div>div{
+        text-align: center;
+        padding-right: 20px;
+        
+      }
+
+      p{
+        text-align: center;
+      }
+      h3{
+        text-align: center;
+      }
+      button{
+        display: block;
+        margin: auto;
+      }
+       
+
+
+      }
+      
+      /* small screens */
+      @media only screen and (min-width: 70px) and (max-width: 420px) {
+        #container{
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: auto;
+
+        }
+        
+        img{
+        border-radius: 50%;
+        padding: 10px ;
+        display: block;
+        margin: auto;
+        
+      }
+      #container>div{
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        padding-bottom: 20px;
+        
+        margin: 20px 20px 20px px;
+      }
+      #container>div>div{
+        text-align: center;
+      }
+      p{
+        text-align: center;
+      }
+      h3{
+        text-align: center;
+      }
+      button{
+        text-align: center;
+        display: block;
+        margin: auto;
+      }
+       
+      }
+    </style>
+  </head>
+  <body>
+    <!-- image link - 
+      https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg -->
+    <h1>Just movies</h1>
+    <div id="container">
+         <div>
+           <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg" alt=""/>
+           <div>
+               <h3>Radhe Shyam</h3>
+               <p>Realising on March 11, 2022</p>
+               <button>Book tickets</button>
+           </div>
+         </div>
+         <div>
+          <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg" alt=""/>
+          <div>
+              <h3>Radhe Shyam</h3>
+              <p>Realising on March 11, 2022</p>
+              <button>Book tickets</button>
+          </div>
+         </div>
+         <div>
+          <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg" alt=""/>
+          <div>
+              <h3>Radhe Shyam</h3>
+              <p>Realising on March 11, 2022</p>
+              <button>Book tickets</button>
+          </div>
+         </div>
+         <div>
+          <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg" alt=""/>
+          <div>
+              <h3>Radhe Shyam</h3>
+              <p>Realising on March 11, 2022</p>
+              <button>Book tickets</button>
+          </div>
+         </div>
+         <div>
+          <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg" alt=""/>
+          <div>
+              <h3>Radhe Shyam</h3>
+              <p>Realising on March 11, 2022</p>
+              <button>Book tickets</button>
+          </div>
+         </div>
+         <div>
+          <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg" alt=""/>
+          <div>
+              <h3>Radhe Shyam</h3>
+              <p>Realising on March 11, 2022</p>
+              <button>Book tickets</button>
+          </div>
+         </div>
+    </div>
+  </body>
+</html>

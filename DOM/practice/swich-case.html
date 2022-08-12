@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="country" id="continent_select">
+        <option value="India">India</option>
+        <option value="United_States_of_America">United States of America</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Austrelia">Austrelia</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="South_Africa">South Africa</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Canada">Canada</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Sweden">Sweden</option>
+    </select>
+    <p id="out">See here</p>
+    <input type="submit" id="btn">
+</body>
+</html>
+<script>
+    document.querySelector("#btn").addEventListener("click", getContinent)
+    
+    
+    var output = document.getElementById("out")
+
+function getContinent ()
+{
+    var x = document.querySelector("#continent_select").value;
+    switch (x) 
+    {
+        case "India":
+        output.innerText = "Asia";
+        break;
+
+        case "United_States_of_America":
+        output.innerText = "North America";
+        break;
+
+        case "China":
+        output.innerText = "Asia";
+        break;
+
+        case "Nepal":
+        output.innerText = "Asia";
+        break;
+
+        case "Austrelia":
+        output.innerText = "Austrelia";
+        break;
+
+        case "France":
+        output.innerText = "Europe";
+        break;
+
+        case "Germany":
+        output.innerText = "Europe";
+        break;
+
+        case "Sweden":
+        output.innerText = "Europe";
+        break;
+
+        case "South_Africa":
+        output.innerText = "Africa";
+        break;
+
+        case "Nigeria":
+        output.innerText = "Africa";
+        break;
+
+        case "Mexico":
+        output.innerText = "North America";
+        break;
+
+        case "Canada":
+        output.innerText = "North America";
+        break;   
+
+        case "Argentina":
+        output.innerText = "South America";
+        break;  
+
+        case "Brazil":
+        output.innerText = "South America";
+        break; 
+
+        case "Singapore":
+        output.innerText = "Asia";
+        break;      
+
+    }
+}
+    
+</script>

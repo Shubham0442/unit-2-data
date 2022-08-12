@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 90%;
+            height: 60px;
+            
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(9,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            justify-content: space-between;
+            margin-top: 300px;
+            
+
+        }
+        
+        #container>button{
+            border-radius: 10px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            border: 0;
+        }
+        #container>button:nth-child(1)
+        {
+            background-color: #1c85ff;
+        }
+
+        #container>button:nth-child(2)
+        {
+            background-color: #6c747c;
+            width: 115%;
+            margin-left:-10px;
+            margin-right: -10px;
+        }
+
+
+        #container>button:nth-child(3)
+        {
+            background-color: #28a744;
+            margin-right: -10px;
+        }
+
+
+        #container>button:nth-child(4)
+        {
+            background-color: #dc3344;
+
+        }
+
+
+        #container>button:nth-child(5)
+        {
+            background-color: #ffbf07;
+            color: black;
+            margin-left:-10px;
+        }
+
+
+        #container>button:nth-child(6)
+        {
+            background-color: #13a1b7;
+            margin-left:-10px;
+            width: 56%;
+        }
+
+        #container>button:nth-child(7)
+        {
+            background-color:#f8f9f9;
+            color: #343940;
+            margin-left:-75px;
+            width: 65%;
+        }
+
+        #container>button:nth-child(8)
+        {
+            background-color:#343940;
+            margin-left: -125px;
+            width: 85px;
+        }
+
+        #container>button:nth-child(9)
+        {
+            background-color: #fefffe;
+            color: #1c85ff;
+            margin-left: -180px;
+            
+            width: 85px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div id="container">
+        <button>Primary</button>
+        <button>Secondary</button>
+        <button>Success</button>
+        <button>Danger</button>
+        <button>Warning</button>
+        <button>Info</button>
+        <button>light</button>
+        <button>Dark</button>
+        <button>Link</button>
+    </div>
+</body>
+</html>

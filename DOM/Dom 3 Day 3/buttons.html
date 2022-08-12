@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    var buttonArr = 
+    [
+         {textContent:"Primary",background:"dodgerblue", color:"white",brr:10},
+         {textContent:"Secondary",background:"dimgray", color:"white"},
+         {textContent:"Success",background:"seagreen", color:"white"},
+         {textContent:"Danger",background:"crimson", color:"white"},
+         {textContent:"Warning",background:"gold", color:"black"},
+         {textContent:"Info",background:"lightseagreen", color:"white"},
+         {textContent:"Light",background:"whitesmoke", color:"black"},
+         {textContent:"Dark",background:"darkslategray", color:"white"},
+         {textContent:"Link",background:"white", color:"dodgerblue"}
+    ]
+
+    buttonArr.map(function(el)
+    {
+         var button1 = document.createElement("button");
+         button1.textContent = el.textContent;
+         button1.style.backgroundColor = el.background;
+         button1.style.color = el.color;
+         button1.style.borderRadius=el.borderRadius
+
+         document.querySelector("body").append(button1)
+    })
+
+
+
+</script>

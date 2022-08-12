@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    localStorage.setItem("name1","shubham")
+    localStorage.setItem("name2","shubh")
+
+    
+    var name1 = localStorage.getItem("name1")
+    console.log(name1)
+
+    localStorage.setItem("mob",12345)
+    var cvv = localStorage.getItem("mob")
+    console.log(cvv)
+
+    var arr = ["shubham","dinesh","harsh"]
+    localStorage.setItem("names", JSON.stringify(arr))
+   
+    var get  = JSON.parse(localStorage.getItem("names"))
+    console.log(get)
+
+
+    var obj = {name:"smr",city:"akola"}
+    localStorage.setItem("myObj",JSON.stringify(obj))
+    var myobj =JSON.parse(localStorage.getItem("myObj"))
+    console.log(myobj)
+
+    var data = [
+    {
+      imgUrl:
+        "https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+      name: "LATEST MEN’S SNEAKER",
+      price: "$25.00",
+      strikedOffPrice: "$95.00",
+    },
+    {
+      imgUrl:
+        "https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+      name: "LATEST MEN’S SNEAKER",
+      price: "$35.00",
+      strikedOffPrice: "$100.00",
+    },
+    {
+      imgUrl:
+        "https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+      name: "LATEST MEN’S SNEAKER",
+      price: "$35.00",
+      strikedOffPrice: "$100.00",
+    },
+    {
+      imgUrl:
+        "https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+      name: "LATEST MEN’S SNEAKER",
+      price: "$35.00",
+      strikedOffPrice: "$100.00",
+    }
+    ]
+
+    var data1 = localStorage.setItem("mydata1",JSON.stringify(data))
+    var obj1 = JSON.parse(localStorage.getItem("mydata1"))
+    console.log(obj1)
+</script>

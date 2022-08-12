@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database</title>
+    <link rel="stylesheet" href="commonStyles.css" />
+  </head>
+
+  <body>
+    <div id="links">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="apply.html">Applied Jobs</a></div>
+      <div><a href="book.html">Bookmarks</a></div>
+    </div>
+
+    <select id="sortNames" onchange="handleNameSort()">
+      <option value="">Sort By Names</option>
+      <option value="ascending">Ascending</option>
+      <option value="descending">Descending</option>
+    </select>
+
+    <select id="sortSalary" onchange="handleSalarySort()">
+      <option value="">Sort By Salary</option>
+      <option value="htl">High to Low</option>
+      <option value="lth">Low to High</option>
+    </select>
+
+    <select id="filterRole" onchange="handleRoleFilter()">
+      <option value="">Filter by Role</option>
+      <option value="FSD">FSD</option>
+      <option value="Frontend">Frontend</option>
+      <option value="Backend">Backend</option>
+    </select>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Job applied</th>
+            <th>Salary expected</th>
+            <th>Add to bookmark</th>
+          </tr>
+        </thead>
+        <tbody id="body">
+          <!-- Append your output to tbody -->
+        </tbody>
+      </table>
+    </main>
+  </body>
+  </html>
+  <script>
+     var appliedjobs = JSON.parse(localStorage.getItem("JobApplication"))
+      
+     var bookmarkArr = JSON.parse(localStorage.getItem("bookmarkkey")) || [];
+     
+     
+     window.addEventListener( "load", function (){
+        displayData(appliedjobs);
+     });
+   
+    function handleNameSort (){
+       var selected = document.querySelector("#sortNames").value;
+
+         if (selected == "ascending")
+         {
+             appliedjobs.sort( function (a,b){
+                 
+                if (a.name > b.name) return 1
+                if (a.name < b.name) return-1
+                return 0;
+             })
+            
+             displayData (appliedjobs)
+
+         }
+
+         if (selected == "descending")
+         {
+             appliedjobs.sort(function (a,b){
+                 if (a.name > b.name) return -1
+                 if (a.name < b.name) return 1
+                 return 0
+             })
+
+             displayData (appliedjobs)
+         }
+
+    }
+  
+    function handleSalarySort ()
+    {
+        var selected = document.querySelector("#sortSalary").value;
+
+        if (selected == "htl")
+        {
+            appliedjobs.sort( function (a, b){
+                return b.salary - a.salary
+            })
+            displayData(appliedjobs)
+        }
+
+        if (selected == "lth")
+        {
+            appliedjobs.sort( function (a, b){
+                return a.salary - b.salary
+            })
+            displayData(appliedjobs)
+        }
+
+    }
+
+    function handleRoleFilter () 
+    {
+        var selected = document.querySelector("#filterRole").value
+
+        var filteredList = appliedjobs.filter( function (elem){
+            return elem.role == selected
+        })
+
+        displayData(filteredList)
+    }
+    
+        
+
+    function displayData (appliedjobs)
+    {
+        document.querySelector("tbody").innerHTML = "";
+
+        appliedjobs.map(function(elem){
+
+                var tr = document.createElement("tr")
+
+                var td1 = document.createElement("td");
+                td1.innerText = elem.name
+
+                var td2 = document.createElement("td");
+                td2.innerText = elem.email;
+
+                var td3 = document.createElement("td");
+                td3.innerText = elem.role
+
+                var td4 = document.createElement("td");
+                td4.innerText=elem.salary;
+
+                var td5 = document.createElement("td");
+                td5.innerText = "Bookmark";
+                td5.style.color = "blue";
+                td5. style.cursor = "pointer"
+
+                td5.addEventListener("click", function (){
+                    bookmarks(elem)
+                });
+
+
+                tr.append(td1,td2,td3,td4,td5)
+
+                document.querySelector("tbody").append(tr)
+        });
+     }
+
+
+     function bookmarks(elem)
+     {
+         bookmarkArr.push(elem);
+         localStorage.setItem("bookmarkkey", JSON.stringify(bookmarkArr))
+     }
+  </script>
